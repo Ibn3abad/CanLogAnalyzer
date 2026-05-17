@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CAN Log Analyzer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_Buttons">
+      <item>
+       <widget class="QPushButton" name="openLogButton">
+        <property name="text">
+         <string>Open Log File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exportCsvButton">
+        <property name="text">
+         <string>Export CSV</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="statisticsButton">
+        <property name="text">
+         <string>Show Statistics</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_1">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="aboutButton">
+        <property name="text">
+         <string>About App</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_Filters">
+      <item>
+       <widget class="QLabel" name="filterLabel">
+        <property name="text">
+         <string>Level Filter:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="levelFilterComboBox"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="moduleFilterLabel">
+        <property name="text">
+         <string>Module Filter:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="moduleFilterComboBox"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="searchLabel">
+        <property name="text">
+         <string>Search:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="searchLineEdit">
+        <property name="placeholderText">
+         <string>Search logs...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="languageLabel">
+        <property name="text">
+         <string>Language:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="languageComboBox"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="dropHintLabel">
+      <property name="styleSheet">
+       <string>color: gray; font-style: italic;</string>
+      </property>
+      <property name="text">
+       <string>Tip: You can drag and drop a .txt/.log/.csv file into this window.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableView" name="logTableView">
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
